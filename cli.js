@@ -11,7 +11,6 @@ sade("daegr <repo> <path>", true)
   .option("-b, --branch", "The branch to be used. (defaults to `master`)")
   .action((repo, path, options) => {
     const splitRepo = repo.split("/");
-    console.log(splitRepo);
 
     downloadAndExtractGithubRepo({
       username: splitRepo[0],

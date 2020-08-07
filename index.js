@@ -19,9 +19,6 @@ async function downloadAndExtractGithubRepo({
 
   if (!existsSync(directory)) await ensureDir(resolve(directory));
 
-  console.log(`${username}/${repo} path: ${path} branch: ${branch}`);
-  console.log(path.split("/").length);
-
   return pipeline(
     got.stream(
       `https://codeload.github.com/${username}/${repo}/tar.gz/${branch}`
