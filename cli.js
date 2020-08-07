@@ -1,4 +1,4 @@
-#!/bin/env node
+#!/usr/bin/env node
 
 const sade = require("sade");
 const downloadAndExtractGithubRepo = require("./index");
