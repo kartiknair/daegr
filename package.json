@@ -1,0 +1,10 @@
+{
+  "name": "daegr",
+  "version": "1.0.0",
+  "description": "Download & extract a GitHub repository.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
