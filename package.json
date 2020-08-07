@@ -2,9 +2,18 @@
   "name": "daegr",
   "version": "1.0.0",
   "description": "Download & extract a GitHub repository.",
-  "main": "index.js",
+  "main": "./index.js",
+  "bin": {
+    "daegr": "./cli.js"
+  },
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "got": "^11.5.2",
+    "sade": "^1.7.3",
+    "tar": "^6.0.2"
+  }
 }
