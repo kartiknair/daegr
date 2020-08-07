@@ -1,6 +1,6 @@
 {
   "name": "daegr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download & extract a GitHub repository.",
   "main": "./index.js",
   "bin": {
