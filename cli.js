@@ -9,15 +9,24 @@ sade("daegr <repo> <path>", true)
   .example("gatsbyjs/gastby my-gatsby")
   .example("kartiknair/dhow .")
   .option("-b, --branch", "The branch to be used. (defaults to `master`)")
-  .action((repo, path, options) => {
+  .action(async (repo, path, options) => {
     const splitRepo = repo.split("/");
 
-    downloadAndExtractGithubRepo({
-      username: splitRepo[0],
-      repo: splitRepo[1],
-      path: splitRepo.slice(2).join("/"),
-      branch: options.branch,
-      directory: path,
-    });
+    console.log("Downloading...");
+
+    try {
+      await downloadAndExtractGithubRepo({
+        username: splitRepo[0],
+        repo: splitRepo[1],
+        path: splitRepo.slice(2).join("/"),
+        branch: options.branch,
+        directory: path,
+      });
+      console.log("Finished downloading successfully!");
+    } catch (err) {
+      console.log("Download failed");
+      console.error(err);
+      process.exit(-1);
+    }
   })
   .parse(process.argv);
