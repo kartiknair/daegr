@@ -15,3 +15,7 @@ Examples
     $ daegr gatsbyjs/gastby my-gatsby
     $ daegr kartiknair/dhow .
 ```
+
+### Credit:
+
+This is basically directly yoinked from [create-next-app's source code](https://github.com/vercel/next.js/blob/canary/packages/create-next-app/helpers/examples.ts#L71). Just needed an easy way to use in multiple projects without copy-pasting.
